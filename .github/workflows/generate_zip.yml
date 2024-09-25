@@ -48,9 +48,9 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          '*.json'
-          'genshin_resources.zip'
-          './resources/genshin_resources.zip'
+          *.json
+          genshin_resources.zip
+          ./resources/genshin_resources.zip
 
           
     - name: Commit changes
