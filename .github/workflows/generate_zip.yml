@@ -34,6 +34,9 @@ jobs:
 
     - name: Run Generate Script
       run: poetry run python generate.py
+
+    - name: Show Dir
+      run: ls
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
