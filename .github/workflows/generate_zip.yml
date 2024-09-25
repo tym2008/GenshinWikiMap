@@ -42,8 +42,8 @@ jobs:
       uses: softprops/action-gh-release@v1
       #if: startsWith(github.ref, 'refs/tags/')
       with:
-        tag_name: "pulled_files"
-        name: Release "${{ github.event.inputs.docker_images }}"
+        tag_name: "files"
+        name: Release File
         body: TODO New Release.
         draft: false
         prerelease: false
