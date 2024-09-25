@@ -36,7 +36,11 @@ jobs:
       run: poetry run python generate.py
 
     - name: Show Dir
-      run: ls
+      run: |
+        ls
+        cd resources
+        ls
+        cd ..
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
