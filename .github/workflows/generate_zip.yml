@@ -34,7 +34,22 @@ jobs:
 
     - name: Run Generate Script
       run: poetry run python generate.py
+      
+    - name: Create Release and Upload Release Asset
+      uses: softprops/action-gh-release@v1
+      #if: startsWith(github.ref, 'refs/tags/')
+      with:
+        tag_name: "pulled_files"
+        name: Release "${{ github.event.inputs.docker_images }}"
+        body: TODO New Release.
+        draft: false
+        prerelease: false
+        files: |
+          '*.json'
+          '*.zip'
+          '!resources/genshin_resources.zip'
 
+          
     - name: Commit changes
       run: |
         git lfs track "*.zip"
