@@ -39,6 +39,7 @@ jobs:
       run: |
         ls
         cd resources
+        echo "Dir Resources:"
         ls
         cd ..
       
